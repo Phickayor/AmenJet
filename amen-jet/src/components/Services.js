@@ -1,6 +1,8 @@
 import React from "react";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 function Services() {
+  AOS.init();
   const services = [
     {
       image:
@@ -40,13 +42,17 @@ function Services() {
     }
   ];
   return (
-    <div id="services">
+    <div id="services" data-aos="fade-up" data-aos-duration="2000">
       <h1 className="text-5xl mt-10 font-serif">
         Our <i className="">Services</i>
       </h1>
       <div className="flex justify-center m-10 flex-wrap">
         {services.map((service) => (
-          <div className="w-96 m-5 h-96 p-5 flex flex-wrap justify-center border rounded-3xl">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="3000"
+            className="w-96 m-5 h-96 p-5 flex flex-wrap justify-center border rounded-3xl"
+          >
             <img
               src={service.image}
               alt={service.name + "image"}

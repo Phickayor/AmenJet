@@ -2,7 +2,11 @@ import React from "react";
 
 function Home() {
   return (
-    <div className="flex flex-wrap mt-36 pl-5 justify-center w-full">
+    <div
+      data-aos="zoom-in"
+      data-aos-duration="2000"
+      className="flex flex-wrap mt-36 pl-5 justify-center w-full"
+    >
       <img
         className="rounded-3xl "
         src="https://stella-hospital.netlify.app/img/Medicine.gif"

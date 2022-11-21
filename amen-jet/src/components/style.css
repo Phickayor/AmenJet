@@ -2,8 +2,3 @@ body {
   background-color: #000;
   color: #fff;
 }
-@media screen and (max-width: 590px) {
-  #Menu {
-    display: none;
-  }
-}

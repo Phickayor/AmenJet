@@ -13,7 +13,7 @@ function Home() {
         <p className="text-3xl p-5 font-mono">
           Bringing quality health care to your door step.
         </p>
-        <button className=" p-5 rounded-3xl bg-blue-500 font-serif text-center hover:bg-inherit hover:border text-2xl text-white">
+        <button className="rounded-3xl bg-blue-600 font-serif text-center hover:bg-inherit hover:border p-10 text-2xl text-white">
           Book Appointment
         </button>
       </div>

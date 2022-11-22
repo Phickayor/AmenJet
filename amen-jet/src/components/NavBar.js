@@ -1,6 +1,35 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
 import "./style.css";
 function NavBar() {
+  const bars = <FontAwesomeIcon icon={faBars} />;
+  const light = <FontAwesomeIcon icon={faSun} />;
+  const dark = <FontAwesomeIcon icon={faMoon} />;
+  const [theme, setTheme] = useState(light);
+  const [themeValue, setThemeValue] = useState("light");
+  const [darkThemeColor, setDarkThemeColor] = useState(false);
+  const [darkThemeBackground, setDarkThemeBackground] = useState(false);
+
+  function changeTheme(e) {
+    if (themeValue === "dark") {
+      setTheme(light);
+      setThemeValue("light");
+      setDarkThemeBackground(false);
+      setDarkThemeColor(false);
+      document.body.style.backgroundColor = "whitesmoke";
+      document.body.style.color = "#000";
+    } else {
+      setTheme(dark);
+      setThemeValue("dark");
+      setDarkThemeBackground(true);
+      setDarkThemeColor(true);
+      document.body.style.backgroundColor = "#000";
+      document.body.style.color = "#fff";
+    }
+  }
+
   return (
     <div className="fixed w-full h-32 top-0 flex flex-col z-10 bg-black justify-end">
       <img
@@ -12,7 +41,18 @@ function NavBar() {
         Amen Jet
       </h2>
       <h2 className="absolute text-black rounded-3xl bg-white p-5 text-4xl md:hidden cursor-pointer top-2 right-5">
-        &#9776;
+        {bars}
+      </h2>
+      <h2
+        onClick={() => changeTheme()}
+        //
+        style={{
+          color: darkThemeColor ? "white" : "black",
+          backgroundColor: darkThemeBackground ? "black" : "white"
+        }}
+        className="absolute hidden text-white rounded-3xl bg-black p-5 text-4xl md:block cursor-pointer top-2 right-5"
+      >
+        {theme}
       </h2>
       <ul
         id="Menu"

@@ -54,14 +54,13 @@ function Reviews() {
 
     if (allReviews.scrollLeft === allReviewsWidth) {
       allReviews.scrollTo(0, 0);
-      alert(allReviewsWidth);
     } else {
       allReviews.scrollTo(allReviews.scrollLeft + 1, 0);
     }
   }
   setInterval(() => {
     scroll();
-  }, 20);
+  }, 15);
   return (
     <div>
       <h1 className="text-5xl mt-10 font-serif">
@@ -72,9 +71,9 @@ function Reviews() {
           <div
             data-aos="fade-right"
             data-aos-duration="3000"
-            className="w-96 m-5 h-96 flex flex-wrap justify-center border-8 rounded-3xl"
+            className="m-10 lg:-w-max h-80 flex flex-wrap justify-center border-white border-4 rounded-3xl shadow-2xl"
           >
-            <h1 className="text-4xl border-b p-5 self-baseline rounded-3xl font-serif w-full">
+            <h1 className="text-4xl border-b p-5 self-baseline border-white rounded-3xl font-serif w-full">
               {review.service}
             </h1>
             <p className="text-lg font-mono w-full">{review.review}</p>

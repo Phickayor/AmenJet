@@ -44,7 +44,7 @@ function Services() {
   return (
     <div id="services" data-aos="fade-up" data-aos-duration="2000">
       <h1 className="text-5xl mt-10 font-serif">
-        Our <i className="">Services</i>
+        Our <i className="text-blue-600">Services</i>
       </h1>
       <div className="flex justify-center m-10 flex-wrap">
         {services.map((service) => (

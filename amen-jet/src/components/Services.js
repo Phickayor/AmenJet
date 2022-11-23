@@ -44,14 +44,14 @@ function Services() {
   return (
     <div id="services" data-aos="fade-up" data-aos-duration="2000">
       <h1 className="text-5xl mt-10 font-serif">
-        Our <i className="text-blue-600">Services</i>
+        Our <i className="text-blue-500">Services</i>
       </h1>
       <div className="flex justify-center m-10 flex-wrap">
         {services.map((service) => (
           <div
             data-aos="fade-up"
             data-aos-duration="3000"
-            className="w-96 m-5 bg-white hover:bg-blue-100 text-black shadow-2xl h-96 p-5 flex flex-wrap justify-center rounded-3xl"
+            className="w-96 m-5 bg-white hover:bg-blue-500 hover:text-white text-black shadow-2xl h-96 p-5 flex flex-wrap justify-center rounded-3xl"
           >
             <img
               src={service.image}

@@ -3,6 +3,7 @@ import React from "react";
 function Home() {
   return (
     <div
+      id="overview"
       data-aos="zoom-in"
       data-aos-duration="2000"
       className="flex flex-wrap mt-36 pl-5 justify-center w-full"
@@ -17,7 +18,7 @@ function Home() {
         <p className="text-3xl p-5 font-mono">
           Bringing quality health care to your door step.
         </p>
-        <button className="rounded-3xl bg-blue-600 font-serif text-center hover:bg-inherit hover:border p-10 text-2xl text-white">
+        <button className="rounded-3xl bg-blue-600 font-serif text-center hover:bg-white hover:text-black p-10 text-2xl text-white">
           Book Appointment
         </button>
       </div>

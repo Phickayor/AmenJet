@@ -62,7 +62,7 @@ function Reviews() {
     scroll();
   }, 15);
   return (
-    <div>
+    <div id="reviews">
       <h1 className="text-5xl mt-10 font-serif">
         The <i className="text-blue-600">Reviews</i>
       </h1>

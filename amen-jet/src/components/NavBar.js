@@ -31,7 +31,7 @@ function NavBar() {
   }
 
   return (
-    <div className="fixed w-full h-32 top-0 flex flex-col z-10 bg-black justify-end">
+    <div className="sticky w-full h-32 top-0 flex flex-col z-10 bg-black justify-end">
       <img
         className=" w-full top-0 left-0 h-32 opacity-40"
         alt="#"
@@ -54,16 +54,37 @@ function NavBar() {
       >
         {theme}
       </h2>
-      <ul
-        id="Menu"
-        className="absolute text-white md:text-2xl text-xl hidden md:flex font-serif space-x-6 p-5 z-index-1 w-full justify-center"
-      >
-        <li>Overview</li>
-        <li>Services</li>
-        <li>Contact</li>
-        <li>Reviews</li>
-        <li>Gallery</li>
-        <li>Contact</li>
+      <ul className="absolute text-white md:text-2xl text-xl hidden md:flex font-serif space-x-6 p-5 z-index-1 w-full justify-center">
+        <a
+          href="#overview"
+          className="hover:border-b-4 active:border-b-4 active:border-b-blue-500 p-4"
+        >
+          <li>Overview</li>
+        </a>
+        <a
+          href="#services"
+          className="hover:border-b-4 active:border-b-4 active:border-b-blue-500 p-4"
+        >
+          <li>Services</li>
+        </a>
+        <a
+          href="#contact"
+          className="hover:border-b-4 active:border-b-4 active:border-b-blue-500 p-4"
+        >
+          <li>Contact</li>
+        </a>
+        <a
+          href="#reviews"
+          className="hover:border-b-4 active:border-b-4 active:border-b-blue-500 p-4"
+        >
+          <li>Reviews</li>
+        </a>
+        <a
+          href="#gallery"
+          className="hover:border-b-4 active:border-b-4 active:border-b-blue-500 p-4"
+        >
+          <li>Gallery</li>
+        </a>
       </ul>
     </div>
   );

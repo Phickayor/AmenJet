@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import "./style.css";
+//initialized the react project itself
 function NavBar() {
   const bars = <FontAwesomeIcon icon={faBars} />;
   const light = <FontAwesomeIcon icon={faSun} />;

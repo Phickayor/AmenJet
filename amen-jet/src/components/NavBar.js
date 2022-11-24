@@ -1,11 +1,17 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBars,
+  // faClose,
+  faMoon,
+  faSun
+} from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import "./style.css";
 //initialized the react project itself
 function NavBar() {
   const bars = <FontAwesomeIcon icon={faBars} />;
+  // const close = <FontAwesomeIcon icon={faClose} />;
   const light = <FontAwesomeIcon icon={faSun} />;
   const dark = <FontAwesomeIcon icon={faMoon} />;
   const [theme, setTheme] = useState(dark);
@@ -44,6 +50,38 @@ function NavBar() {
       <h2 className="absolute text-black rounded-3xl bg-white p-5 text-4xl md:hidden cursor-pointer top-2 right-5">
         {bars}
       </h2>
+      {/* <ul className="absolute top-0 right-0 h-screen text-white md:hidden bg-black md:text-2xl text-2xl md:flex font-serif space-x-6 p-5 z-index-1 w-80 justify-center">
+        <a
+          href="#overview"
+          className="hover:border-4 active:border-4 active:border-b-whitre-500 p-4"
+        >
+          <li>Overview</li>
+        </a>
+        <a
+          href="#services"
+          className="hover:border-b-4 active:border-b-4 active:border-b-blue-500 p-4"
+        >
+          <li>Services</li>
+        </a>
+        <a
+          href="#contact"
+          className="hover:border-b-4 active:border-b-4 active:border-b-blue-500 p-4"
+        >
+          <li>Contact</li>
+        </a>
+        <a
+          href="#reviews"
+          className="hover:border-b-4 active:border-b-4 active:border-b-blue-500 p-4"
+        >
+          <li>Reviews</li>
+        </a>
+        <a
+          href="#gallery"
+          className="hover:border-b-4 active:border-b-4 active:border-b-blue-500 p-4"
+        >
+          <li>Gallery</li>
+        </a>
+      </ul> */}
       <h2
         onClick={() => changeTheme()}
         //

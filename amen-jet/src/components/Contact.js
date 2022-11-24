@@ -15,7 +15,7 @@ function Contact() {
       <div
         data-aos="fade-up"
         data-aos-duration="3000"
-        className="w-9/12 m-5 bg-white text-black shadow-2xl  p-5 rounded-3xl hover:bg-blue-500 hover:text-white"
+        className="w-9/12 m-10 bg-white text-black shadow-2xl  p-5 rounded-3xl hover:bg-blue-500 hover:text-white"
       >
         <form>
           <label className="p-5 font-mono text-3xl">E-mail</label>

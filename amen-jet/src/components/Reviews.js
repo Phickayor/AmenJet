@@ -71,13 +71,13 @@ function Reviews() {
           <div
             data-aos="fade-right"
             data-aos-duration="3000"
-            className="m-10 lg:-w-max h-80 flex flex-wrap justify-center border-white border-4 rounded-3xl shadow-2xl"
+            className="m-10 lg:min-w-max h-80 flex flex-wrap justify-center border-white border-4 rounded-3xl shadow-2xl"
           >
             <h1 className="text-4xl border-b p-5 self-baseline border-white rounded-3xl font-serif w-full">
               {review.service}
             </h1>
-            <p className="text-lg font-mono w-full">{review.review}</p>
-            <blockquote>{"~" + review.author}</blockquote>
+            <q className="text-lg font-mono w-full">{review.review}</q>
+            <cite>{"~" + review.author}</cite>
           </div>
         ))}
       </div>

@@ -8,21 +8,21 @@ function NavBar() {
   const bars = <FontAwesomeIcon icon={faBars} />;
   const light = <FontAwesomeIcon icon={faSun} />;
   const dark = <FontAwesomeIcon icon={faMoon} />;
-  const [theme, setTheme] = useState(light);
+  const [theme, setTheme] = useState(dark);
   const [themeValue, setThemeValue] = useState("light");
   const [darkThemeColor, setDarkThemeColor] = useState(false);
   const [darkThemeBackground, setDarkThemeBackground] = useState(false);
 
   function changeTheme(e) {
     if (themeValue === "dark") {
-      setTheme(light);
+      setTheme(dark);
       setThemeValue("light");
       setDarkThemeBackground(false);
       setDarkThemeColor(false);
       document.body.style.backgroundColor = "whitesmoke";
       document.body.style.color = "#000";
     } else {
-      setTheme(dark);
+      setTheme(light);
       setThemeValue("dark");
       setDarkThemeBackground(true);
       setDarkThemeColor(true);
@@ -48,8 +48,8 @@ function NavBar() {
         onClick={() => changeTheme()}
         //
         style={{
-          color: darkThemeColor ? "white" : "black",
-          backgroundColor: darkThemeBackground ? "black" : "white"
+          color: darkThemeColor ? "black" : "white",
+          backgroundColor: darkThemeBackground ? "white" : "black"
         }}
         className="absolute hidden text-white rounded-3xl bg-black p-5 text-4xl md:block cursor-pointer top-2 right-5"
       >

@@ -51,7 +51,7 @@ function Services() {
           <div
             data-aos="fade-up"
             data-aos-duration="3000"
-            className="w-96 m-5 bg-white hover:bg-blue-500 hover:text-white text-black shadow-2xl h-96 p-5 flex flex-wrap justify-center rounded-3xl"
+            className="w-96 m-5 bg-white hover:bg-blue-500 hover:text-white text-black shadow-2xl p-5 flex flex-wrap justify-center rounded-3xl"
           >
             <img
               src={service.image}

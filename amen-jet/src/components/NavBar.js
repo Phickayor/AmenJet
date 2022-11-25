@@ -70,33 +70,35 @@ function NavBar() {
         style={{
           width: sideBarWidth,
           padding: sideBarPadding,
-          transition: "0.5s"
+          transition: "0.5s",
+          color: darkThemeBackground ? "white" : "black",
+          backgroundColor: darkThemeBackground ? "black" : "whitesmoke"
         }}
         className="absolute top-0 right-0 h-screen overflow-y-scroll overflow-x-hidden text-white md:hidden bg-black md:text-2xl text-2xl font-serif p-10 w-80"
       >
-        <a href="#overview">
-          <li className="hover:border-b-4 p-4 mb-20 border-blue-100 mt-20 self-center">
+        <a href="#overview" onClick={ToggleSideMenu}>
+          <li className="hover:border-4 p-4 mb-20 border-blue-100 mt-20">
             Overview
           </li>
         </a>
-        <a href="#services">
-          <li className="hover:border-b-4 p-4 mb-20 border-blue-100">
-            Services
-          </li>
+        <a href="#services" onClick={ToggleSideMenu}>
+          <li className="hover:border-4 p-4 mb-20 border-blue-100">Services</li>
         </a>
-        <a href="#contact">
-          <li className="hover:border-b-4 p-4 mb-20 border-blue-100">
-            Contact
-          </li>
+        <a href="#contact" onClick={ToggleSideMenu}>
+          <li className="hover:border-4 p-4 mb-20 border-blue-100">Contact</li>
         </a>
-        <a href="#reviews">
-          <li className="hover:border-b-4 p-4 mb-20 border-blue-100">
-            Reviews
-          </li>
+        <a href="#reviews" onClick={ToggleSideMenu}>
+          <li className="hover:border-4 p-4 mb-20 border-blue-100">Reviews</li>
         </a>
-        <a href="#gallery">
-          <li className="hover:border-b-4 p-4 mb-20 border-blue-100">
-            Gallery
+        <a href="#gallery" onClick={ToggleSideMenu}>
+          <li className="hover:border-4 p-4 mb-20 border-blue-100">Gallery</li>
+        </a>
+        <a href="#s" onClick={ToggleSideMenu}>
+          <li
+            onClick={changeTheme}
+            className="hover:border-4 p-4 mb-20 border-blue-100"
+          >
+            Switch Mode
           </li>
         </a>
       </ul>
@@ -119,7 +121,7 @@ function NavBar() {
       >
         {theme}
       </h2>
-      <ul className="absolute text-white md:text-2xl text-xl hidden md:flex font-serif space-x-6 justify-center">
+      <ul className="absolute w-full text-white md:text-2xl text-xl hidden md:flex font-serif space-x-6 justify-center">
         <a
           href="#overview"
           className="hover:border-b-4 active:border-b-4 active:border-b-blue-500 p-4"

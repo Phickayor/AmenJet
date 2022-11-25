@@ -1,10 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faEnvelope,
-  faMailBulk,
-  faPhone
-} from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faInstagram, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 function Contact() {

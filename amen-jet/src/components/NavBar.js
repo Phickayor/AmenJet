@@ -2,18 +2,22 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
-  // faClose,
+  faClose,
   faMoon,
   faSun
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import "./style.css";
-//initialized the react project itself
+
 function NavBar() {
   const bars = <FontAwesomeIcon icon={faBars} />;
-  // const close = <FontAwesomeIcon icon={faClose} />;
+  const close = <FontAwesomeIcon icon={faClose} />;
   const light = <FontAwesomeIcon icon={faSun} />;
   const dark = <FontAwesomeIcon icon={faMoon} />;
+  const [sideMenuBtn, setSideMenuBtn] = useState(bars);
+  const [sideBarWidth, setWidth] = useState("0px");
+  const [sideBarPadding, setSideBarPadding] = useState("0px");
+  const [sideMenuBtnValue, setSideMenuBtnValue] = useState(true);
   const [theme, setTheme] = useState(dark);
   const [themeValue, setThemeValue] = useState("light");
   const [darkThemeColor, setDarkThemeColor] = useState(false);
@@ -37,6 +41,20 @@ function NavBar() {
     }
   }
 
+  function ToggleSideMenu() {
+    if (sideMenuBtnValue === true) {
+      setSideMenuBtn(close);
+      setSideBarPadding("1.25rem");
+      setWidth("20rem");
+      setSideMenuBtnValue(false);
+    } else {
+      setSideMenuBtn(bars);
+      setSideBarPadding("0");
+      setWidth("0");
+      setSideMenuBtnValue(true);
+    }
+  }
+
   return (
     <div className="sticky w-full h-32 top-0 flex flex-col z-10 bg-black justify-end">
       <img
@@ -47,41 +65,49 @@ function NavBar() {
       <h2 className="absolute bottom-2 text-white md:text-4xl text-5xl font-mono md:top-3 left-10">
         Amen Jet
       </h2>
-      <h2 className="absolute text-black rounded-3xl bg-white p-5 text-4xl md:hidden cursor-pointer top-2 right-5">
-        {bars}
-      </h2>
-      {/* <ul className="absolute top-0 right-0 h-screen text-white md:hidden bg-black md:text-2xl text-2xl md:flex font-serif space-x-6 p-5 z-index-1 w-80 justify-center">
-        <a
-          href="#overview"
-          className="hover:border-4 active:border-4 active:border-b-whitre-500 p-4"
-        >
-          <li>Overview</li>
+
+      <ul
+        style={{
+          width: sideBarWidth,
+          padding: sideBarPadding,
+          transition: "0.5s"
+        }}
+        className="absolute top-0 right-0 h-screen overflow-y-scroll overflow-x-hidden text-white md:hidden bg-black md:text-2xl text-2xl font-serif p-10 w-80"
+      >
+        <a href="#overview">
+          <li className="hover:border-b-4 p-4 mb-20 border-blue-100 mt-20 self-center">
+            Overview
+          </li>
         </a>
-        <a
-          href="#services"
-          className="hover:border-b-4 active:border-b-4 active:border-b-blue-500 p-4"
-        >
-          <li>Services</li>
+        <a href="#services">
+          <li className="hover:border-b-4 p-4 mb-20 border-blue-100">
+            Services
+          </li>
         </a>
-        <a
-          href="#contact"
-          className="hover:border-b-4 active:border-b-4 active:border-b-blue-500 p-4"
-        >
-          <li>Contact</li>
+        <a href="#contact">
+          <li className="hover:border-b-4 p-4 mb-20 border-blue-100">
+            Contact
+          </li>
         </a>
-        <a
-          href="#reviews"
-          className="hover:border-b-4 active:border-b-4 active:border-b-blue-500 p-4"
-        >
-          <li>Reviews</li>
+        <a href="#reviews">
+          <li className="hover:border-b-4 p-4 mb-20 border-blue-100">
+            Reviews
+          </li>
         </a>
-        <a
-          href="#gallery"
-          className="hover:border-b-4 active:border-b-4 active:border-b-blue-500 p-4"
-        >
-          <li>Gallery</li>
+        <a href="#gallery">
+          <li className="hover:border-b-4 p-4 mb-20 border-blue-100">
+            Gallery
+          </li>
         </a>
-      </ul> */}
+      </ul>
+
+      <button
+        onClick={() => ToggleSideMenu()}
+        className="absolute text-black rounded-3xl bg-white p-5 text-4xl md:hidden cursor-pointer top-2 right-5 z-index-50"
+      >
+        {sideMenuBtn}
+      </button>
+
       <h2
         onClick={() => changeTheme()}
         //
@@ -93,7 +119,7 @@ function NavBar() {
       >
         {theme}
       </h2>
-      <ul className="absolute text-white md:text-2xl text-xl hidden md:flex font-serif space-x-6 p-5 z-index-1 w-full justify-center">
+      <ul className="absolute text-white md:text-2xl text-xl hidden md:flex font-serif space-x-6 justify-center">
         <a
           href="#overview"
           className="hover:border-b-4 active:border-b-4 active:border-b-blue-500 p-4"

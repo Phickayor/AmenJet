@@ -47,7 +47,7 @@ function Contact() {
           </button>
         </form>
 
-        <ul className=" p-5 bg-white m-5 text-black rounded-2xl flex justify-center sm:flex-col ">
+        <ul className="  bg-white m-5 text-black rounded-2xl flex justify-center sm:flex-col ">
           <a href=".">
             <li className="text-6xl m-5 hover:text-blue-500">{whatsapp}</li>
           </a>

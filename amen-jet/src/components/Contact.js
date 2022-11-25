@@ -49,16 +49,24 @@ function Contact() {
 
         <ul className="  bg-white m-5 text-black rounded-2xl flex justify-center sm:flex-col ">
           <a href=".">
-            <li className="text-6xl m-5 hover:text-blue-500">{whatsapp}</li>
+            <li className="text-5xl sm:text-6xl m-5 hover:text-blue-500">
+              {whatsapp}
+            </li>
           </a>
           <a href=".">
-            <li className="text-6xl m-5 hover:text-blue-500">{instagram}</li>
+            <li className="text-5xl sm:text-6xl m-5 hover:text-blue-500">
+              {instagram}
+            </li>
           </a>
           <a href=".">
-            <li className="text-5xl m-5 hover:text-blue-500">{phone}</li>
+            <li className="text-4xl sm:text-5xl m-5 hover:text-blue-500">
+              {phone}
+            </li>
           </a>
           <a href=".">
-            <li className="text-5xl m-5 hover:text-blue-500">{mail}</li>
+            <li className="text-4xl sm:text-5xl m-5 hover:text-blue-500">
+              {mail}
+            </li>
           </a>
         </ul>
       </div>

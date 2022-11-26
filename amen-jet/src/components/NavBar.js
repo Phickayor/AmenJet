@@ -56,7 +56,7 @@ function NavBar() {
   }
 
   return (
-    <div className="sticky w-full h-32 top-0 flex flex-col z-10 bg-black justify-end">
+    <div className="sticky rounded-b-3xl w-full h-32 top-0 flex flex-col z-10 bg-black justify-end">
       <img
         className=" w-full top-0 left-0 h-32 opacity-40"
         alt="#"

@@ -6,7 +6,7 @@ function Home() {
       id="overview"
       data-aos="zoom-in"
       data-aos-duration="2000"
-      className="flex flex-wrap mt-12 p-5 justify-center w-full"
+      className="flex flex-wrap text-black p-5 justify-center w-full bg-white"
     >
       <img
         className="rounded-3xl "

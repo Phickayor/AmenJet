@@ -62,8 +62,8 @@ function Reviews() {
     scroll();
   }, 15);
   return (
-    <div id="reviews">
-      <h1 className="text-5xl mt-10 font-serif">
+    <div id="reviews" className="h-full">
+      <h1 className="text-5xl mt-36 font-serif">
         The <i className="text-blue-600">Reviews</i>
       </h1>
       <div className="flex overflow-x-scroll" id="allReviews">

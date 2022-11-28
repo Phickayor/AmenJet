@@ -42,8 +42,13 @@ function Services() {
     }
   ];
   return (
-    <div id="services" data-aos="fade-up" data-aos-duration="2000">
-      <h1 className="text-5xl mt-10 font-serif">
+    <div
+      id="services"
+      data-aos="fade-up"
+      data-aos-duration="2000"
+      className="h-full"
+    >
+      <h1 className="text-5xl mt-36 font-serif">
         Our <i className="text-blue-500">Services</i>
       </h1>
       <div className="flex justify-center m-10 flex-wrap">

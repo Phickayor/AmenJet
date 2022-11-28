@@ -13,9 +13,9 @@ function Contact() {
       id="contact"
       data-aos="fade-up"
       data-aos-duration="2000"
-      className="flex flex-wrap justify-center"
+      className="flex h-full flex-wrap justify-center"
     >
-      <h1 className="text-5xl mt-10 font-serif w-full">
+      <h1 className="text-5xl mt-36 font-serif w-full">
         <i className="text-blue-500">Contact </i>Us
       </h1>
 
@@ -48,7 +48,7 @@ function Contact() {
         </form>
 
         <ul className="  bg-white m-5 text-black rounded-2xl flex justify-center sm:flex-col ">
-          <a href=".">
+          <a href="https://wa.me/+2348056505476">
             <li className="text-5xl sm:text-6xl m-5 hover:text-blue-500">
               {whatsapp}
             </li>
@@ -58,12 +58,12 @@ function Contact() {
               {instagram}
             </li>
           </a>
-          <a href=".">
+          <a href="tel:+2349025303318">
             <li className="text-4xl sm:text-5xl m-5 hover:text-blue-500">
               {phone}
             </li>
           </a>
-          <a href=".">
+          <a href="mailto:jetawotemitope@gmail@gmail.com">
             <li className="text-4xl sm:text-5xl m-5 hover:text-blue-500">
               {mail}
             </li>
